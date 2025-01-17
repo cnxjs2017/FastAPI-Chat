@@ -2,7 +2,7 @@
 - 本项目实现了一个基于FastAPI的AI对话后端，
 ## 项目结构
 - app/
-  - __init__.py
+  - \_\_init__.py
   - main.py              # FastAPI 应用入口
   - models/              # 数据库模型
   - schemas/             # Pydantic 数据模型
@@ -15,6 +15,7 @@
 ### 环境准备与运行
 - 安装依赖：`pip install -r requirements.txt`
 - 安装数据库 自行下载PostgreSQL数据库，新建一个数据库，我使用的用户名、密码、端口和数据库名在.env里可以看到。
+- 需要自行修改的代码 services/message.py 中的AI_API_URL需要自行填上，具体请求的方式需要自己修改，我给的是vllm部署的借口请求方式。
 - 运行：`uvicorn app.main:app --reload`
 ### 接口文档
 - 项目运行后访问 `http://127.0.0.1:8000/docs` 即可查看接口文档。
